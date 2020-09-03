@@ -16,10 +16,18 @@
 				
             var map = new google.maps.Map(document.getElementById("mapPlaceholder"),mapOptions);
             
-            var marker = new google.maps.Marker({
+            var jayMarker = new google.maps.Marker({
                position: new google.maps.LatLng(-33.746594, 151.265780),
-               map: map,
+               label: "Jays House"
             });
+
+            var dadMarker = new google.maps.Marker({
+               position: new google.maps.LatLng(-33.757252, 151.293332),
+               label: "Dads House"
+            });
+
+            jayMarker.setMap(map);
+            dadMarker.setMap(map);
          }
       </script>
       
