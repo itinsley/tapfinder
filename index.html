@@ -1,0 +1,32 @@
+<!-- https://support.google.com/maps/answer/18539?co=GENIE.Platform%3DDesktop&hl=en -->
+
+<!DOCTYPE html>
+<html>
+   
+   <head>
+      <script src = "https://maps.googleapis.com/maps/api/js"></script>
+      
+      <script>
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(-33.746594, 151.265780),
+               zoom:13
+            }
+				
+            var map = new google.maps.Map(document.getElementById("mapPlaceholder"),mapOptions);
+            
+            var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(-33.746594, 151.265780),
+               map: map,
+            });
+         }
+      </script>
+      
+   </head>
+   
+   <body onload = "loadMap()">
+      <div id = "mapPlaceholder" style = "width:580px; height:400px;"></div>
+   </body>
+   
+</html>
